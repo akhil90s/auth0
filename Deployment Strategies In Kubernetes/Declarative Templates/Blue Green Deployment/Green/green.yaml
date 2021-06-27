@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: green-deployment
+spec:
+  selector:
+    matchLabels:
+      app: green-deployment
+      version: nanoserver-1809
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: green-deployment
+        version: nanoserver-1809
+    spec:
+      containers:
+        - name: green-deployment
+          image: hello-world:nanoserver-1809
