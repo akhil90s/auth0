@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  name: blue-green-service
+  labels: 
+    name: blue-deployment
+    version: nanoserver-1709
+spec:
+  ports:
+    - name: http
+      port: 80
+      targetPort: 80
+  selector: 
+    name: blue-deployment
+    version: nanoserver-1709
+  type: LoadBalancer

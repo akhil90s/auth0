@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-app-recreate-strategy
+  labels:
+    name: web-app-recreate-strategy
+    version: nanoserver-1809
+spec:
+  ports:
+    - name: http
+      port: 80
+      targetPort: 80
+  selector:
+    name: web-app-recreate-strategy
+    version: nanoserver-1809
+  type: LoadBalancer
