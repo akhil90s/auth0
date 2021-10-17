@@ -5,6 +5,9 @@
 	<groupId>com.auth0.example</groupId>
 	<artifactId>Auth0SpringMVC</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<name>Spring MVC Integration With Auth0</name>
+	<description>Securing a Spring MVC Web Application using Auth0</description>
 
 	<!-- Add Spring Web and MVC dependencies -->
 	<dependencies>
